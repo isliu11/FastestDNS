@@ -1,0 +1,30 @@
+{
+  "name": "fastest-dns",
+  "version": "1.0.0",
+  "description": "查找最快DNS服务器的命令行工具",
+  "main": "bin/dns-speed.js",
+  "bin": {
+    "fastest-dns": "./bin/dns-speed.js"
+  },
+  "scripts": {
+    "test": "node test/test.js",
+    "start": "node bin/dns-speed.js",
+    "dev": "node bin/dns-speed.js -i 8.8.8.8,1.1.1.1",
+    "update": "node --tls-min-v1.0 bin/dns-speed.js -u",
+    "test:url": "node test/testUrl.js"
+  },
+  "keywords": [
+    "dns",
+    "speed-test"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "cli-progress": "^3.12.0",
+    "commander": "^12.1.0",
+    "dns-packet": "^5.6.1",
+    "p-limit": "^3.1.0",
+    "https-proxy-agent": "^7.0.4"
+  }
+}
